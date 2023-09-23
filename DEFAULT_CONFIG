@@ -1,0 +1,42 @@
+# Pull the image
+# SCRIPT_PATH="$(dirname -- "${BASH_SOURCE[0]}")"
+
+export PORT=7777
+export NAME=default
+export DOCKER_NAME="tmodloader_server_$NAME"
+export DATA_PATH=$SCRIPT_PATH/../volumes/$NAME/data
+
+export IMAGE_VERSION='latest'
+
+### Mods
+# 2562953970 : Better Zoom // QOL for zooming in and out on higher resolution monitors
+# 2561619075 : Summoner's association // QOL for making groups of minions to summon automatically
+# 2821806183 : Shields of chtulu // Allows combination of SoC with obsidian shield and upgrades
+# 2828370879 : Shop Expander
+# 2816694149 : Boss Cursor
+# 2817496179 : Atmospheric Torches
+# 2565540604 : Auto Trash
+# 2562915378 : Max Stack Plus Extra
+# 2565639705 : Ore Excavator (1.4.3/1.4.4 Veinminer)
+# 2669644269 : Boss Checklist
+# 2563851005 : Which Mod Is This From? (WMITF)
+# 2619954303 : Recipe Browser
+# 2614857307 : OmniSwing
+# 2563309347 : Magic Storage
+# 2687866031 : Census - Town NPC Checklist
+
+# Download list of mods
+export TMOD_AUTODOWNLOAD='2562953970,2561619075,2821806183,2828370879,2816694149,2817496179,2565540604,2562915378,2565639705,2669644269,2563851005,2619954303,2614857307,2563309347,2687866031'
+
+# Enable all downloaded mods
+export TMOD_ENABLEDMODS=$TMOD_AUTODOWNLOAD
+
+export TMOD_SHUTDOWN_MESSAGE='Goodbye!'
+export TMOD_AUTOSAVE_INTERVAL='5'
+export TMOD_MOTD='Welcome to my tModLoaderServer!'
+export TMOD_PASS='CorrectHorseBatteryStaple'
+export TMOD_MAXPLAYERS='16'
+export TMOD_WORLDNAME='MyWorld'
+export TMOD_WORLDSIZE='3'
+export TMOD_WORLDSEED=''
+export TMOD_DIFFICULTY='3'
